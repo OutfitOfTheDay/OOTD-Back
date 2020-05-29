@@ -1,10 +1,12 @@
 API명세
 =
 
+host: 192.168.137.1:1212
+
 메인
 -
 ```
-GET/feed?sortN=1
+GET/feed?sortN={Number}&status={Number}
 ```
 
 - Request
@@ -16,10 +18,6 @@ GET/feed?sortN=1
 - Reponse
 ```
 SUCCESS {
-  weather: {
-    status: number,
-    temp: number
-  },
   feed:[
     {
       _id: string,
