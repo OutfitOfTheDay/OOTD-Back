@@ -4,14 +4,13 @@ API명세
 메인
 -
 ```
-GET/feed
+GET/feed?sortN=1
 ```
 
 - Request
 ```
 {
-  "cityName": string
-	"sort": number
+  
 }
 ```
 - Reponse
@@ -41,6 +40,28 @@ SUCCESS {
   ]
 }
 ```   
+
+날씨요청
+-
+```
+GET/weather?country={String}
+```
+- Request
+```
+{
+  
+}
+```
+- Reponse
+```
+SUCCESS {
+  weather: {
+    status: number,
+    temp: number
+  }
+}
+```   
+
 
 마이페이지보기
 -
