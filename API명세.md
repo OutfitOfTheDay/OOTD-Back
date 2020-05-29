@@ -44,7 +44,7 @@ SUCCESS {
 날씨요청
 -
 ```
-GET/weather?country={String}
+GET/weather?lat={Number}&lon={Number}
 ```
 - Request
 ```
