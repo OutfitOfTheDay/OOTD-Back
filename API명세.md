@@ -186,12 +186,9 @@ POST/post
   pictures:[
     string
   ],
-  date: string,
   content: string,
-  weather: {
-    status: number,
-    temp: number
-  }
+  status: number,
+  temp: number
 }
 ```
 - Reponse
