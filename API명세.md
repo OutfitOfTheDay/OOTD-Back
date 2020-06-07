@@ -6,7 +6,7 @@ baseURL:  192.168.43.226:1212
 메인
 -
 ```
-GET/feed?sortN={Number}&status={Number}&temp={temp}
+GET/feed?sortN={Number}&status={Number}&temp={Number}&sex={String}
 ```
 
 - Request
@@ -33,6 +33,12 @@ SUCCESS {
       weather: {
         status: number,
         temp: number
+      }
+      user: {
+        userId: string,
+        profile: string,
+        sex: string,
+        userName: string
       }
     }
   ]
@@ -84,7 +90,7 @@ SUCCESS {
 마이페이지수정
 -
 ```
-GET/mypage
+PUT/mypage
 ```
 - Request
 ```
@@ -119,19 +125,22 @@ SUCCESS {
       _id: string,
       userId: string,
       profile: string,
+      content: string,
       likeN: number,
       cmtN: number,
-      content: string,
       pictures:[
         string
       ],
       date: string,
-      cmtId: [
-        string
-      ],
       weather: {
         status: number,
         temp: number
+      }
+      user: {
+        userId: string,
+        profile: string,
+        sex: string,
+        userName: string
       }
     }
   ]
@@ -156,19 +165,22 @@ SUCCESS {
       _id: string,
       userId: string,
       profile: string,
+      content: string,
       likeN: number,
       cmtN: number,
-      content: string,
       pictures:[
         string
       ],
       date: string,
-      cmtId: [
-        string
-      ],
       weather: {
         status: number,
         temp: number
+      }
+      user: {
+        userId: string,
+        profile: string,
+        sex: string,
+        userName: string
       }
     }
   ]
