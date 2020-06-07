@@ -1,12 +1,12 @@
 API명세
 =
 
-host: 192.168.137.1:1212
+baseURL:  192.168.43.226:1212
 
 메인
 -
 ```
-GET/feed?sortN={Number}&status={Number}
+GET/feed?sortN={Number}&status={Number}&temp={temp}
 ```
 
 - Request
