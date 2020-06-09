@@ -119,8 +119,6 @@ SUCCESS {
   feed:[
     {
       _id: string,
-      userId: string,
-      profile: string,
       content: string,
       likeN: number,
       cmtN: number,
@@ -135,7 +133,6 @@ SUCCESS {
       user: {
         userId: string,
         profile: string,
-        sex: string,
         userName: string
       }
     }
@@ -159,8 +156,6 @@ SUCCESS {
   feed:[
     {
       _id: string,
-      userId: string,
-      profile: string,
       content: string,
       likeN: number,
       cmtN: number,
@@ -175,7 +170,6 @@ SUCCESS {
       user: {
         userId: string,
         profile: string,
-        sex: string,
         userName: string
       }
     }
