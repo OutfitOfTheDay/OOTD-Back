@@ -8,7 +8,6 @@ DB명세
   profile: string,
   _id: string,
   userName: string,
-  sex: string,
   likedId: [
     string
   ]
@@ -19,7 +18,6 @@ DB명세
 -
 ```
 {
-  userId: string,
   likeN: number,
   cmtN: number,
   content: string,
@@ -28,11 +26,15 @@ DB명세
   ],
   _id: string,
   date: stirng,
-  cmtId: [
-      string
-  ],
-  weather: number,
-  temp: number
+  weather: {
+    status: number,
+    temp: number
+  },
+  user:{
+    userId: string,
+    profile: string,
+    userName: string
+  }
 }
 ```
 
@@ -43,6 +45,7 @@ DB명세
   userId: string,
   date: string,
   _id: string,
-  postId: string
+  postId: string,
+  text: string
 }
 ```
