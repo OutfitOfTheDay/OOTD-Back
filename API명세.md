@@ -6,7 +6,7 @@ baseURL:  192.168.43.226:1212
 메인
 -
 ```
-GET/feed?sortN={Number}&status={Number}&temp={Number}&sex={String}
+GET/feed?sortN={Number}&status={Number}&temp={Number}
 ```
 
 - Request
@@ -21,8 +21,6 @@ SUCCESS {
   feed:[
     {
       _id: string,
-      userId: string,
-      profile: string,
       content: string,
       likeN: number,
       cmtN: number,
@@ -37,7 +35,6 @@ SUCCESS {
       user: {
         userId: string,
         profile: string,
-        sex: string,
         userName: string
       }
     }
@@ -83,7 +80,6 @@ GET/mypage
 SUCCESS {
   userName: string,
 	profile: string,
-	sex: string
 } 
 ```
 
