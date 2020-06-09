@@ -1,7 +1,7 @@
 API명세
 =
 
-baseURL:  192.168.43.226:1212
+baseURL:  10.156.145.162:1212
 
 메인
 -
@@ -19,7 +19,7 @@ GET/feed?sortN={Number}&status={Number}&temp={Number}
 ```
 SUCCESS {
   feed:[
-    {
+    post:{
       _id: string,
       content: string,
       likeN: number,
@@ -32,11 +32,11 @@ SUCCESS {
         status: number,
         temp: number
       }
-      user: {
-        userId: string,
-        profile: string,
-        userName: string
-      }
+      userId: string
+    }
+    user:{
+      userName: string,
+      profile: string
     }
   ]
 }
@@ -93,7 +93,6 @@ PUT/mypage
 {
   userName: string,
 	profile: string,
-	sex: string
 }
 ```
 - Reponse
@@ -117,7 +116,7 @@ GET/mypage/myfeed
 ```
 SUCCESS {
   feed:[
-    {
+    post:{
       _id: string,
       content: string,
       likeN: number,
@@ -130,11 +129,11 @@ SUCCESS {
         status: number,
         temp: number
       }
-      user: {
-        userId: string,
-        profile: string,
-        userName: string
-      }
+      userId: string
+    }
+    user:{
+      userName: string,
+      profile: string
     }
   ]
 }
@@ -154,7 +153,7 @@ GET/mypage/tagfeed
 ```
 SUCCESS {
   feed:[
-    {
+    post:{
       _id: string,
       content: string,
       likeN: number,
@@ -167,11 +166,11 @@ SUCCESS {
         status: number,
         temp: number
       }
-      user: {
-        userId: string,
-        profile: string,
-        userName: string
-      }
+      userId: string
+    }
+    user:{
+      userName: string,
+      profile: string
     }
   ]
 }
