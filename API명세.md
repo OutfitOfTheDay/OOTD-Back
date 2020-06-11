@@ -185,7 +185,7 @@ POST/post
 ```
 {
   pictures:[
-    string
+    file
   ],
   content: string,
   status: number,
