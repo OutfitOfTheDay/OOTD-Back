@@ -231,7 +231,8 @@ GET/post/{postId}
 ```
 - Reponse
 ```
-SUCCESS {[
+SUCCESS {
+  comment: {[
   userId: string,
   date: string,
   _id: string,
@@ -241,5 +242,6 @@ SUCCESS {[
     userName: String,
     profile: String
   }
-]} 
+]}
+} 
 ```
