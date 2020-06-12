@@ -217,3 +217,29 @@ SUCCESS {
 
 } 
 ```
+
+글 자세히 보기
+-
+```
+GET/post/{postId}
+```
+- Request
+```
+{
+
+}
+```
+- Reponse
+```
+SUCCESS {[
+  userId: string,
+  date: string,
+  _id: string,
+  postId: string,
+  text: string
+  user:{
+    userName: String,
+    profile: String
+  }
+]} 
+```
