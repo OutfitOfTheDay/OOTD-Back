@@ -207,7 +207,7 @@ POST/comment
 - Request
 ```
 {
-  comment: string
+  text: string
   postId: string
 }
 ```
