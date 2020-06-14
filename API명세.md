@@ -232,16 +232,18 @@ GET/post/{postId}
 - Reponse
 ```
 SUCCESS {
-  comment: {[
-  userId: string,
-  date: string,
-  _id: string,
-  postId: string,
-  text: string
-  user:{
-    userName: String,
-    profile: String
-  }
-]}
+  comments: [{
+    comment:{
+      userId: string,
+      date: string,
+      _id: string,
+      postId: string,
+      text: string
+    },
+    user:{
+      userName: String,
+      profile: String
+    }
+  }]
 } 
 ```
