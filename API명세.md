@@ -86,7 +86,7 @@ SUCCESS {
 마이페이지수정
 -
 ```
-PUT/mypage
+PATCH/mypage
 ```
 - Request
 ```
