@@ -86,7 +86,7 @@ SUCCESS {
 마이페이지수정
 -
 ```
-PATCH/mypage
+PUT/mypage
 ```
 - Request
 ```
@@ -232,7 +232,7 @@ GET/post/{postId}
 - Reponse
 ```
 SUCCESS {
-  comments: [{
+  [{
     comment:{
       userId: string,
       date: string,
