@@ -238,12 +238,48 @@ SUCCESS {
       date: string,
       _id: string,
       postId: string,
-      text: string
+      text: string,
     },
     user:{
       userName: String,
       profile: String
     }
   }]
+} 
+```
+
+글 삭제하기
+-
+```
+DELETE/post/{postId}
+```
+- Request
+```
+{
+
+}
+```
+- Reponse
+```
+SUCCESS {
+  messege: success
+} 
+```
+
+좋아요
+-
+```
+GET/like/{postId}
+```
+- Request
+```
+{
+
+}
+```
+- Reponse
+```
+SUCCESS {
+  messege: success
 } 
 ```
