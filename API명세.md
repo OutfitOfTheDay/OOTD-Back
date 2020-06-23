@@ -36,7 +36,8 @@ SUCCESS {
     }
     user:{
       userName: string,
-      profile: string
+      profile: string,
+      likedId: [string]
     }
   ]
 }
@@ -133,7 +134,8 @@ SUCCESS {
     }
     user:{
       userName: string,
-      profile: string
+      profile: string,
+      likedId: [string]
     }
   ]
 }
@@ -170,7 +172,8 @@ SUCCESS {
     }
     user:{
       userName: string,
-      profile: string
+      profile: string,
+      likedId: [string]
     }
   ]
 }
