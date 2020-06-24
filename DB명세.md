@@ -30,11 +30,6 @@ DB명세
     status: number,
     temp: number
   },
-  user:{
-    userId: string,
-    profile: string,
-    userName: string
-  }
 }
 ```
 
