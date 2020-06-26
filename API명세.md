@@ -305,6 +305,25 @@ SUCCESS {
 } 
 ```
 
+구글 로그인
+-
+```
+GET/auth/google
+```
+- Request
+```
+{
+
+}
+```
+- Reponse
+```
+SUCCESS {
+  messege: success
+} 
+```
+
+
 로그아웃
 -
 ```
