@@ -286,3 +286,39 @@ SUCCESS {
   messege: success
 } 
 ```
+
+페북 로그인
+-
+```
+GET/auth/facebook
+```
+- Request
+```
+{
+
+}
+```
+- Reponse
+```
+SUCCESS {
+  messege: success
+} 
+```
+
+로그아웃
+-
+```
+GET/logout
+```
+- Request
+```
+{
+
+}
+```
+- Reponse
+```
+SUCCESS {
+  messege: success
+} 
+```
