@@ -301,7 +301,12 @@ GET/auth/facebook
 - Reponse
 ```
 SUCCESS {
-  messege: success
+  user: {
+    profile: String,
+    userName: String,
+    _id: String,
+    id: String
+  }
 } 
 ```
 
@@ -319,7 +324,12 @@ GET/auth/google
 - Reponse
 ```
 SUCCESS {
-  messege: success
+  user: {
+    profile: String,
+    userName: String,
+    _id: String,
+    id: String
+  }
 } 
 ```
 
