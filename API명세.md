@@ -287,62 +287,17 @@ SUCCESS {
 } 
 ```
 
-페북 로그인
+로그인
 -
 ```
-GET/auth/facebook
+POST/login
 ```
 - Request
 ```
 {
-
-}
-```
-- Reponse
-```
-SUCCESS {
-  user: {
-    profile: String,
-    userName: String,
-    _id: String,
-    id: String
-  }
-} 
-```
-
-구글 로그인
--
-```
-GET/auth/google
-```
-- Request
-```
-{
-
-}
-```
-- Reponse
-```
-SUCCESS {
-  user: {
-    profile: String,
-    userName: String,
-    _id: String,
-    id: String
-  }
-} 
-```
-
-
-로그아웃
--
-```
-GET/logout
-```
-- Request
-```
-{
-
+  uesrId: String,
+  userName: String,
+  accessToken: String
 }
 ```
 - Reponse
@@ -351,3 +306,4 @@ SUCCESS {
   messege: success
 } 
 ```
+

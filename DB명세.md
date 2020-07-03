@@ -10,7 +10,8 @@ DB명세
   userName: string,
   likedId: [
     string
-  ]
+  ],
+  id: String
 }
 ```
 
