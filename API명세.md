@@ -303,7 +303,8 @@ POST/login
 - Reponse
 ```
 SUCCESS {
-  messege: success
+  messege: success,
+  token: String
 } 
 ```
 
