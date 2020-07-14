@@ -14,7 +14,7 @@ const writePost = async(req,res)=>{
     date: formatDate(d),
     time: d.getTime(),
     content: req.body.content,
-    userId: req.user.id
+    userId: req.decoded.id
   };
 
   req.files.forEach(element => p.pictures.push(config.picturesUrl+element.filename));
@@ -73,7 +73,7 @@ const seePost = (req,res) =>{
 const writeComment = (req,res)=>{
   let d = new Date();
   const c = {
-    userId:  req.user.id,
+    userId:  req.decoded.id,
     date: formatDate(d),
     postId: req.body.postId,
     text: req.body.text,
@@ -106,7 +106,7 @@ const writeComment = (req,res)=>{
 }
 
 const updatePost = (req,res)=>{
-  const userId = req.user.id;
+  const userId = req.decoded.id;
   const checkUser = async(userId)=>{
     const post = await Post.findOne({_id:req.params.postId}).catch((e)=>res.status(500).json(e));
     if(post.userId != userId ) new Error('not writer');
@@ -149,7 +149,7 @@ const updatePost = (req,res)=>{
 }
 
 const deletePost = (req,res)=>{
-  const userId = req.user.id;
+  const userId = req.decoded.id;
 
   const delPost = async ()=>{
     await Post.remove({_id:req.params.postId})
@@ -183,10 +183,8 @@ const formatDate = (d)=>{
   return [year, month, day].join('-');
 }
 
-const likePost = (req,res)=>{
-  console.log(req.user);
-  
-  const userId = req.user.id;
+const likePost = (req,res)=>{  
+  const userId = req.decoded.id;
 
   const UserLike = async (userId)=>{
     let user =  await User.findOne({id: userId})

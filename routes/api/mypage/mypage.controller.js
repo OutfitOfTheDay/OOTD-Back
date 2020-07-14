@@ -2,9 +2,9 @@ const User = require('../../../models/User');
 const Post = require('../../../models/Post');
 const Comment = require('../../../models/Comment');
 const config = require('../../../config/config');
+
 const seeMypage = (req,res)=>{
-  const userId = req.user.id;
-  
+  let userId = req.decoded.id
   const findUser = async(userId)=>{
     let user =  await User.findOne({id:userId},{userName:1,profile:1})
     .catch(e=>res.status(500).json(e));
@@ -27,7 +27,7 @@ const seeMypage = (req,res)=>{
 }
 
 const updateMypage = (req,res)=>{
-  const userId = req.user.id;
+  const userId = req.decoded.id;
   
   const updateMyInfo = async(userId)=>{
     let user = await User.updateOne({id:userId},{userName: req.body.userName,profile:config.picturesUrl+req.file.filename})
@@ -51,8 +51,7 @@ const updateMypage = (req,res)=>{
 }
 
 const seeMyfeed = (req,res)=>{
-  const userId = req.user.id;
-
+  const userId = req.decoded.id
   const findMyfeed = async(userId)=>{    
     const posts = await Post.find({userId: userId})
     .catch(e=>res.status(500).json(e));
@@ -77,7 +76,7 @@ const seeMyfeed = (req,res)=>{
 }
 
 const seeTagfeed = (req,res)=>{
-  const userId = req.user.id;
+  const userId = req.decoded.id;
 
   const findMyInfo = async(userId)=>{
     const user = await User.findById({id:userId})

@@ -19,7 +19,7 @@ const seeFeed = (req,res)=>{
   const findUser = async(posts)=>{
     let feed = [];
     for(let i=0;i<posts.length;i++){
-      let user =  await User.findOne({_id: posts[i].userId}).catch((e)=>res.status(500).json(e));
+      let user =  await User.findOne({id: posts[i].userId});
       feed.push({post:posts[i],user:user});
     }
     return feed
@@ -30,10 +30,10 @@ const seeFeed = (req,res)=>{
   }
 
   const onError = (err)=>{
-  res.status(403).json({
-    message: err.message
-  });
-}
+    res.status(403).json({
+      message: err.message
+    });
+  }
 
   findPost(sortN,status,temp)
   .then(findUser)
