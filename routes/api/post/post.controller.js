@@ -39,6 +39,13 @@ const writePost = async(req,res)=>{
   .catch(onError)
 }
 
+const getLikedId = async(req,res)=>{
+  const userId = req.decoded.id;
+  const user = await User.findOne({id:userId});
+
+  res.json({likedId:user.likedId});
+}
+
 const seePost = (req,res) =>{
   const {
     postId
@@ -228,5 +235,6 @@ module.exports = {
   writeComment,
   updatePost,
   deletePost,
-  likePost
+  likePost,
+  getLikedId
 }
